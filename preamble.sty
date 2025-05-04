@@ -12,3 +12,34 @@
 \usepackage{minted}
 \usepackage{tempora}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+
+\DeclareCaptionFormat{listingformat}{#1#3} % Убираем двоеточие
+\captionsetup[lstlisting]{
+    font=small,
+    labelsep=endash, % Заменяем двоеточие на тире
+}
+
+\lstdefinestyle{myStyle}{
+    backgroundcolor=\color{gray!5},    % светло-серый фон
+    basicstyle=\ttfamily\small,        % моноширинный шрифт
+    breaklines=true,                   % перенос строк
+    numbers=left,                      % нумерация строк
+    numberstyle=\tiny\color{gray},     % стиль номеров
+    keywordstyle=\color{blue},         % ключевые слова
+    commentstyle=\color{green!50!black}, % комментарии
+    stringstyle=\color{red},           % строки
+    showstringspaces=false,            % не показывать пробелы в строках
+    tabsize=4,                         % размер табуляции
+    language=C++,                      % язык для подсветки
+    captionpos=false                   % подпись снизу
+}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false,
+}
