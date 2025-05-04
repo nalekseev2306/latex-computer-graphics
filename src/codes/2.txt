@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Input Events");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Event Handling");
 
     while (window.isOpen()) {
         sf::Event event;
@@ -21,6 +21,7 @@ int main() {
                           << event.mouseMove.y << std::endl;
             }
         }
+        
         window.clear();
         window.display();
     }

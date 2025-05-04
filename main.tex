@@ -2,30 +2,6 @@
 
 \usepackage{preamble}
 
-\lstdefinestyle{myStyle}{
-    backgroundcolor=\color{gray!5},    % светло-серый фон
-    basicstyle=\ttfamily\small,        % моноширинный шрифт
-    breaklines=true,                   % перенос строк
-    % frame=single,                      % рамка вокруг кода
-    % rulecolor=\color{blue!30},         % цвет рамки
-    numbers=left,                      % нумерация строк
-    numberstyle=\tiny\color{gray},     % стиль номеров
-    keywordstyle=\color{blue},         % ключевые слова
-    commentstyle=\color{green!50!black}, % комментарии
-    stringstyle=\color{red},           % строки
-    showstringspaces=false,            % не показывать пробелы в строках
-    tabsize=4,                         % размер табуляции
-    language=C++,                      % язык для подсветки
-    captionpos=false                       % подпись снизу
-}
-
-\lstset{
-    basicstyle=\ttfamily\small,
-    keywordstyle=\color{blue},
-    stringstyle=\color{red},
-    showstringspaces=false
-}
-
 \begin{document}
 
 % Кафедра (в родительном падеже)
@@ -95,10 +71,6 @@
 
 \input{src/section2/sfml.tex}
 
-\subsection{Переход к 3D: основы OpenGL}
-
-% \input{src/section2/opengl.tex}
-
 \section{Реализация графических алгоритмов}
 
 \subsection{Алгоритмы растеризации}
@@ -127,15 +99,8 @@
 % документа будет являться приложением
 \appendix
 
-\section{Результаты и Листинги}
+\section{}
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{src/img/sfml_shapes.png}
-    \caption{Shapes}
-    \label{fig:shapes}
-\end{figure}
-
-\lstinputlisting[style=myStyle, frame=single, rulecolor=\color{blue!30}, caption=Shapes, captionpos=b, label=lst:shapes]{src/codes/1.txt}
+\input{src/section2/appendix2.tex}
 
 \end{document}
