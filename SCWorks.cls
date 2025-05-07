@@ -878,6 +878,9 @@ C\cyro\cyrd\cyre\cyrr\cyrzh\cyra\cyrn\cyri\cyre\ \cyrr\cyra\cyrb%
 {
 \thispagestyle{empty}
 \shapka
+\begin{center}
+\CYRK\cyra\cyrf\cyre\cyrd\cyrr\cyra\ \@chair
+\end{center}
 
 \vspace{3cm}
 {\centering
