@@ -15,12 +15,18 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{caption}
+\usepackage[none]{hyphenat}  % Полное отключение переносов
+\usepackage{microtype} % Для улучшенной типографики
+
+\sloppy
 
 \DeclareCaptionFormat{listingformat}{#1#3} % Убираем двоеточие
 \captionsetup[lstlisting]{
     font=small,
     labelsep=endash, % Заменяем двоеточие на тире
 }
+
+\AtBeginEnvironment{lstlisting}{\hyphenpenalty=50}  
 
 \lstdefinestyle{myStyle}{
     backgroundcolor=\color{gray!5},    % светло-серый фон
@@ -38,6 +44,12 @@
 }
 
 \lstset{
+    breaklines=true,          % Разрешить перенос строк
+    breakatwhitespace=true,   % Переносить только по пробелам
+    prebreak={\mbox{\allowbreak}},  % Знак переноса (опционально)
+    postbreak={\mbox{\allowbreak}}, % Знак переноса (опционально)
+    keepspaces=true,          % Сохранять пробелы
+    columns=fullflexible,      % Гибкое выравнивание
     basicstyle=\ttfamily\small,
     keywordstyle=\color{blue},
     stringstyle=\color{red},
